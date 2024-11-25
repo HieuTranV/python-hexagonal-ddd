@@ -1,7 +1,7 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 
 class Email(BaseModel):
-    value: EmailStr
+    value: str
 
     def __eq__(self, other):
         return self.value == other.value
